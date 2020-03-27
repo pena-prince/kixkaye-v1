@@ -1,0 +1,333 @@
+:root {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bellota Text', cursive;
+    /* background: rgb(0, 0, 0);
+    background: linear-gradient(140deg, rgba(0, 0, 0, 1) 0%, rgba(253, 29, 29, 1) 25%, rgba(252, 176, 69, 1) 50%,  rgba(0, 0, 0, 1) 100%);
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+p, ul, li, a, img, header, nav, h1, section, button {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+strong{
+    font-size: 2rem;
+}
+
+button {
+    width: 20%;
+    height: 50px;
+    border: none;
+    box-shadow: 1px 1px 5px 2px;
+    font-size: 1.2rem;
+    font-family: 'Bellota Text', cursive;
+    background-color: orange;
+}
+
+button:hover {
+    background-color: #bb6400f8;
+    cursor: pointer;
+}
+
+#mainContainer {
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* .heroContainer img {vertical-align: middle;} */
+
+/* Slideshow container */
+
+.heroContainer .slideshow-container {
+    max-width: 1440px;
+    position: relative;
+}
+
+/* Number text (1/3 etc) */
+
+.heroContainer .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.heroContainer .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.heroContainer .active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+
+.heroContainer .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+header {
+    width: 100%;
+    height: 15%;
+    max-height: 68px;
+    display: flex;
+    background-color: black;
+}
+
+header .logo, footer .logo {
+    margin-left: 3%;
+    width: 15%;
+}
+
+header nav {
+    width: 100%;
+    margin-right: 3%;
+}
+
+header nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style: none;
+    width: auto;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 12px;
+}
+
+header nav ul li a:hover {
+    background-color: white;
+    color: red;
+}
+
+.heroContainer .heroImage {
+    width: 100%;
+}
+
+.heroContainer .heroImage img {
+    width: 100%;
+    max-height: 560px;
+    display: flex;
+    margin: auto;
+}
+
+#welcomeContainer {
+    width: 100%;
+    display: flex;
+}
+
+#welcomeContainer .welcomeCopy {
+    width: 100%;
+    margin: 5% 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#welcomeContainer .headCopy {
+    margin-bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcomeContainer .welcomeCopy .iconDecoration {
+    width: 50px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 35px;
+}
+
+.aboutContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2% 0 5% 0;
+}
+
+.aboutContainer .aboutContainer1 {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutContainer .aboutCopy {
+    width: 30%;
+    text-align: center;
+    align-self: center;
+    margin-right: 2%;
+}
+
+.aboutContainer .aboutCopy p {
+    text-align: left;
+    margin-top: 10%;
+}
+
+.aboutContainer .aboutIconContainer {
+    width: 30%;
+    align-self: center;
+}
+
+.aboutContainer .aboutIconContainer img {
+    width: 100%;
+    align-self: center;
+}
+
+#menu {
+    width: 100%;
+    margin-top: 2%;
+}
+
+#menu .menuContainer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#menu .menuContainer .dishes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2% 0 5% 0;
+}
+
+#menu .menuContainer .dishes .dish {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 5px 5px lightgrey;
+}
+
+#menu .menuContainer .dishes .dish img {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+}
+
+#contact .contactContainer {
+    margin: 2% 0 5% 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .contactContainer .locationMap {
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#contact .contactCopy {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+#contact table {
+    width: 300px;
+}
+
+#contact .contactCopy .phone, #contact .contactCopy .address, #contact .contactCopy .businessHours #contact .contactCopy .socialMedia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .contactCopy button {
+    width: 80%;
+    margin: 30px 0;
+}
+
+footer {
+    width: 100%;
+    height: 15%;
+    max-height: 68px;
+    display: flex;
+    background-color: black;
+}
+
+footer p {
+    margin: auto 5% auto auto;
+    color: white;
+}
+
+footer .fb-like {
+    margin: auto 5% auto auto;
+    /* align-self: center; */
+}
