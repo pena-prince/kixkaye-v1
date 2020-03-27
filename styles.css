@@ -31,7 +31,7 @@ h3 {
     font-size: 1.4rem;
 }
 
-strong{
+strong {
     font-size: 2rem;
 }
 
@@ -303,7 +303,7 @@ header nav ul li a:hover {
     width: 300px;
 }
 
-#contact .contactCopy .phone, #contact .contactCopy .address, #contact .contactCopy .businessHours #contact .contactCopy .socialMedia {
+#contact .contactCopy .phone, #contact .contactCopy .address, #contact .contactCopy .businessHours {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -330,4 +330,30 @@ footer p {
 footer .fb-like {
     margin: auto 5% auto auto;
     /* align-self: center; */
+}
+
+@media only screen and (max-width: 767px) {
+    .aboutContainer .aboutContainer1 {
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    .aboutContainer .aboutContainer1 .aboutCopy {
+        width: 80%;
+        order: 2;
+    }
+    .aboutContainer .aboutContainer1 .aboutCopy p {
+        text-align: center;
+    }
+    .aboutContainer .aboutContainer1 .aboutIconContainer {
+        width: 80%;
+    }
+    #contact .contactContainer .contactCopy {
+        flex-direction: column;
+    }
+    #contact .contactCopy .phone, #contact .contactCopy .address, #contact .contactCopy .businessHours {
+        align-items: center;
+    }
+    footer p {
+        font-size: .5rem;
+    }
 }
