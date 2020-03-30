@@ -7,10 +7,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Bellota Text', cursive;
-    /* background: rgb(0, 0, 0);
-    background: linear-gradient(140deg, rgba(0, 0, 0, 1) 0%, rgba(253, 29, 29, 1) 25%, rgba(252, 176, 69, 1) 50%,  rgba(0, 0, 0, 1) 100%);
-    background-position: center;
-    background-repeat: no-repeat; */
 }
 
 p, ul, li, a, img, header, nav, h1, section, button {
@@ -61,9 +57,12 @@ button:hover {
     display: none;
 }
 
-/* .heroContainer img {vertical-align: middle;} */
-
 /* Slideshow container */
+
+.heroContainer {
+    position: relative;
+    z-index: -100;
+}
 
 .heroContainer .slideshow-container {
     max-width: 1440px;
@@ -136,32 +135,39 @@ header .logo, footer .logo {
     width: 15%;
 }
 
-header nav {
+.nav {
+    height: 50px;
     width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
     margin-right: 3%;
 }
 
-header nav ul {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.nav .nav-btn {
+    display: none;
 }
 
-header nav ul li {
-    list-style: none;
-    width: auto;
+.nav .nav-links {
+    display: inline;
+    font-size: 18px;
 }
 
-header nav ul li a {
+.nav .nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
     text-decoration: none;
-    color: #ffffff;
-    padding: 12px;
+    color: #efefef;
 }
 
-header nav ul li a:hover {
+.nav .nav-links>a:hover {
     background-color: white;
     color: red;
+}
+
+.nav #nav-check {
+    display: none;
 }
 
 .heroContainer .heroImage {
@@ -329,10 +335,59 @@ footer p {
 
 footer .fb-like {
     margin: auto 5% auto auto;
-    /* align-self: center; */
 }
 
 @media only screen and (max-width: 767px) {
+    .nav {
+        margin-right: 3%;
+    }
+    .nav .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        margin-right: 3%;
+    }
+    .nav .nav-btn :hover {
+        cursor: pointer;
+    }
+    .nav .nav-btn label {
+        display: inline-block;
+        width: 25%;
+        padding: 13px 13px 0 0;
+    }
+    .nav .nav-btn label:hover, .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav .nav-btn label span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav .nav-links {
+        left: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        background-color: rgb(0, 0, 0);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+    }
+    .nav .nav-links a, .nav .nav-links .fb-like {
+        display: flex;
+        justify-content: center;
+    }
+    .nav #nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+    .nav #nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
     .aboutContainer .aboutContainer1 {
         flex-direction: column;
         margin-top: 5%;
