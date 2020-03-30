@@ -409,6 +409,7 @@ footer .fb-like {
         align-items: center;
     }
     footer p {
-        font-size: .5rem;
+        font-size: .3rem;
+        text-align: center;
     }
 }
